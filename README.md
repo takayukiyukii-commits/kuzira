@@ -32,7 +32,7 @@
   - [7. タブグループ・タブ管理](#7-タブグループタブ管理)
   - [8. マーケツール（UTM／QR／OGP）](#8-マーケツールutmqrogp)
   - [9. ダッシュボード（GA4・UNIシリーズKPI）](#9-ダッシュボードga4uniシリーズkpi)
-  - [10. AIエージェント代行（MCPサーバー内蔵・34ツール）](#10-aiエージェント代行mcpサーバー内蔵34ツール)
+  - [10. AIエージェント代行（MCPサーバー内蔵・36ツール）](#10-aiエージェント代行mcpサーバー内蔵36ツール)
   - [11. 別アカウントで開く（コンテナタブ）](#11-別アカウントで開くコンテナタブ)
   - [12. ストア（拡張とUNI製品を「KUZIRAに追加」）](#12-ストア拡張とuni製品をkuziraに追加)
 - [キーボードショートカット](#キーボードショートカット)
@@ -66,6 +66,7 @@ KUZIRAは、この一連を**ブラウザの中に最初から入れて**しま�
 |---|---|---|
 | **Windows 10 / 11**（64bit） | [`KUZIRA-Setup-x.y.z.exe`](https://github.com/takayukiyukii-commits/kuzira/releases/latest) 約96MB | 実行するだけでインストール完了（管理者権限不要） |
 | **macOS**（Apple Silicon / Intel） | [`KUZIRA-x.y.z-mac.dmg`](https://github.com/takayukiyukii-commits/kuzira/releases/latest) 約209MB | **Apple公証済み**。ドラッグ＆ドロップでアプリケーションへ |
+| **Linux**（x86_64） | [`KUZIRA-x.y.z-linux-x86_64.AppImage` / `-amd64.deb`](https://kuzira.uni-core.jp/#download) | 実行権限を付けて起動（`chmod +x`）。**日本語フォントが入っていない環境ではUIが豆腐（□）になります**（例: `fonts-noto-cjk` を入れてください）。Win/Macより更新が遅れることがあります |
 
 アカウント登録・ログインは不要です。インストールしてすぐ使えます。
 
@@ -247,7 +248,7 @@ macOS 版は **Apple公証（notarization）済み**です。
 
 ---
 
-### 10. AIエージェント代行（MCPサーバー内蔵・34ツール）
+### 10. AIエージェント代行（MCPサーバー内蔵・36ツール）
 
 KUZIRAは**MCPサーバー**（`http://127.0.0.1:8377/mcp`）を内蔵しています。
 Claude Code や Codex から接続すると、**AIがあなたのブラウザをそのまま操作**できます。
@@ -255,14 +256,16 @@ Claude Code や Codex から接続すると、**AIがあなたのブラウザを
 ログイン済みのセッションをそのまま使えるので、「AIに調べさせたいけどログインが必要」という壁がありません。
 
 <details>
-<summary><b>提供しているツール（全34本の一覧・できること・承認の要否は<a href="https://kuzira.uni-core.jp/security#tools">セキュリティページ</a>で公開しています）</b></summary>
+<summary><b>提供しているツール（全36本の一覧・できること・承認の要否は<a href="https://kuzira.uni-core.jp/security#tools">セキュリティページ</a>で公開しています）</b></summary>
 
 | 分類 | ツール |
 |---|---|
-| タブ操作 | `list_tabs` `open_tab` `navigate` `activate_tab` `close_tab` |
+| タブ操作 | `list_tabs` `open_tab` `navigate` `activate_tab` `move_tab` `pin_tab` `close_tab` |
 | ページ読取 | `read_page` `snapshot` `screenshot` |
 | 操作 | `click` `click_at` `type_text` `press_key` `scroll` `select_option` `upload_file` `wait_for` |
 | 調査・デバッグ | `read_console` `read_network` `wait_download` `run_js` |
+| サイト点検 | `inspect_page` `inspect_site` |
+| 定点チェック | `check_list` `check_add` `check_run` `check_report` `check_remove` |
 | 録画 | `start_recording` `stop_recording` |
 | 二段階認証 | `totp_save` `totp_code` `totp_list` |
 | セッション | `export_cookies` `import_cookies` |
@@ -387,7 +390,7 @@ Claude Code にコピーするだけで `/コマンド` として能力が増え
 | **v0.9.39〜** | ストア（拡張とZUBOLANDプロダクトを「KUZIRAに追加」）、ウェブ版ストアの公開 |
 | v0.9.35 | 入力したAPIキーを暗号化して保存 |
 | v0.9.34 | 「別アカウントで開く」（コンテナタブ） |
-| v0.9.33 | 「AIに触らせないサイト」が読む・撮るにも効くように／AIに渡している道具34本を公開 |
+| v0.9.33 | 「AIに触らせないサイト」が読む・撮るにも効くように／AIに渡している道具の一覧を公開 |
 | v0.9.8 | **Windowsコード署名（ZUBOLAND株式会社名義）**・一般公開 |
 | v0.9.0 | タブグループ追加（作成・折りたたみ・D&D・復元）、タブバーの視認性を全面改善 |
 | v0.8.0 | エージェント強化（自動修復・座標クリック・TOTP対応） |
