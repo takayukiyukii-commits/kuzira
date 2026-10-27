@@ -32,7 +32,7 @@
   - [7. タブグループ・タブ管理](#7-タブグループタブ管理)
   - [8. マーケツール（UTM／QR／OGP）](#8-マーケツールutmqrogp)
   - [9. ダッシュボード（GA4・UNIシリーズKPI）](#9-ダッシュボードga4uniシリーズkpi)
-  - [10. AIエージェント代行（MCPサーバー内蔵・36ツール）](#10-aiエージェント代行mcpサーバー内蔵36ツール)
+  - [10. AIエージェント代行（MCPサーバー内蔵・37ツール）](#10-aiエージェント代行mcpサーバー内蔵37ツール)
   - [11. 別アカウントで開く（コンテナタブ）](#11-別アカウントで開くコンテナタブ)
   - [12. ストア（拡張とUNI製品を「KUZIRAに追加」）](#12-ストア拡張とuni製品をkuziraに追加)
 - [キーボードショートカット](#キーボードショートカット)
@@ -248,7 +248,7 @@ macOS 版は **Apple公証（notarization）済み**です。
 
 ---
 
-### 10. AIエージェント代行（MCPサーバー内蔵・36ツール）
+### 10. AIエージェント代行（MCPサーバー内蔵・37ツール）
 
 KUZIRAは**MCPサーバー**（`http://127.0.0.1:8377/mcp`）を内蔵しています。
 Claude Code や Codex から接続すると、**AIがあなたのブラウザをそのまま操作**できます。
@@ -256,7 +256,7 @@ Claude Code や Codex から接続すると、**AIがあなたのブラウザを
 ログイン済みのセッションをそのまま使えるので、「AIに調べさせたいけどログインが必要」という壁がありません。
 
 <details>
-<summary><b>提供しているツール（全36本の一覧・できること・承認の要否は<a href="https://kuzira.uni-core.jp/security#tools">セキュリティページ</a>で公開しています）</b></summary>
+<summary><b>提供しているツール（全37本の一覧・できること・承認の要否は<a href="https://kuzira.uni-core.jp/security#tools">セキュリティページ</a>で公開しています）</b></summary>
 
 | 分類 | ツール |
 |---|---|
@@ -268,6 +268,7 @@ Claude Code や Codex から接続すると、**AIがあなたのブラウザを
 | 定点チェック | `check_list` `check_add` `check_run` `check_report` `check_remove` |
 | 録画 | `start_recording` `stop_recording` |
 | 二段階認証 | `totp_save` `totp_code` `totp_list` |
+| 1Password でログイン | `login_fill`（はじめはオフ。エージェントモードONでも毎回あなたの確認が要る。AIに値は渡らない） |
 | セッション | `export_cookies` `import_cookies` |
 
 </details>
